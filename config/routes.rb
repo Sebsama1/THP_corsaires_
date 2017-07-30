@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  root 'static_pages#home'
+  get '/index', to: 'static_pages#index'
 
-  get 'static_pages/index'
-
-  get 'static_pages/nouveaucorsaire'
+  get '/nouveaucorsaire', to: 'static_pages#nouveaucorsaire'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'application#hello'
+
 end
